@@ -18,7 +18,6 @@ a {
     padding: 10px 12px;
     margin: 5px;
     font-weight: 500;
-    color: #CCD0CF;
     text-decoration: none;
     border-radius: 25px;
 }
@@ -32,7 +31,7 @@ a {
 }
 
 a:hover {
-    background: linear-gradient(90deg, #253745, #11212D);
+    
 }
 
 .nav {
@@ -43,7 +42,7 @@ a:hover {
 .menu_btn {
     background-color: transparent;
     border: none;
-    color: #CCD0CF;
+    
     font-size: 21px;
     cursor: pointer;
     padding: 6px 12px;
@@ -52,7 +51,7 @@ a:hover {
 }
 
 .menu_btn:hover {
-    background: linear-gradient(90deg, #253745, #11212D);
+    
 }
 
 /* SCROLL Y */
@@ -63,7 +62,7 @@ a:hover {
 
 .nav_scroll {
     transition: .5s;
-    background-color: rgba(37, 55, 69, .5);
+    
     border-radius: 25px;
 }
 
@@ -81,7 +80,6 @@ a:hover {
         top: 0;
         right: 0;
         flex-direction: column;
-        background-color: #06141B;
         padding: 1rem;
         transform: translateX(100%);
     }
@@ -90,11 +88,11 @@ a:hover {
         transform: translateX(0);
     }
 
-    .header_scroll {
-        justify-content: space-between;
+    .nav_scroll {
+        border-radius: 0;
     }
 
-    .hidden {
-        display: block;
+    .header_scroll {
+        justify-content: space-between;
     }
 }

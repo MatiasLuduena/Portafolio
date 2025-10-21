@@ -12,11 +12,3 @@ body {
 .hidden {
     display: none !important;
 }
-
-/* MAIN*/
-main {
-    width: 100%;
-    height: 100vh;
-    background: linear-gradient(90deg, #06141B, #11212D);
-    color: #CCD0CF;
-}

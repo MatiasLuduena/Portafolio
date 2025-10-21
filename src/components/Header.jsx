@@ -30,6 +30,7 @@ const Header = () => {
             </div>
             <nav className={`${styles.nav} ${menuOpen ? styles.nav_open : ""} ${scrolled && styles.nav_scroll}`}>
                 <a href="" onClick={() => setMenuOpen(false)}>inicio</a>
+                <a href="" onClick={() => setMenuOpen(false)}>sobre mi</a>
                 <a href="" onClick={() => setMenuOpen(false)}>proyectos</a>
                 <a href="" onClick={() => setMenuOpen(false)}>contactame</a>
             </nav>
