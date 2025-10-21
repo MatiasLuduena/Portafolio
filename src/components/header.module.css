@@ -1,0 +1,100 @@
+header {
+    background-color: transparent;
+    width: 100%;
+    position: fixed;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 20px;
+}
+
+.a_titulo {
+    font-size: 21px;
+    font-weight: 500;
+}
+
+a {
+    text-transform: uppercase;
+    padding: 10px 12px;
+    margin: 5px;
+    font-weight: 500;
+    color: #CCD0CF;
+    text-decoration: none;
+    border-radius: 25px;
+}
+
+.a_titulo:hover {
+    background: none;
+}
+
+.hidden {
+    display: none;
+}
+
+a:hover {
+    background: linear-gradient(90deg, #253745, #11212D);
+}
+
+.nav {
+    transition: .5s;
+    display: flex;
+}
+
+.menu_btn {
+    background-color: transparent;
+    border: none;
+    color: #CCD0CF;
+    font-size: 21px;
+    cursor: pointer;
+    padding: 6px 12px;
+    border-radius: 15px;
+    display: none;
+}
+
+.menu_btn:hover {
+    background: linear-gradient(90deg, #253745, #11212D);
+}
+
+/* SCROLL Y */
+.header_scroll {
+    justify-content: center;
+    transition: .5s;
+}
+
+.nav_scroll {
+    transition: .5s;
+    background-color: rgba(37, 55, 69, .5);
+    border-radius: 25px;
+}
+
+/* MEDIA QUERY */
+@media (max-width: 768px) {
+    /* mostrar menú hamburguesa */
+    .menu_btn {
+        display: block;
+    }
+
+    .nav {
+        position: fixed;
+        width: calc(100% - 75px);
+        height: 100%;
+        top: 0;
+        right: 0;
+        flex-direction: column;
+        background-color: #06141B;
+        padding: 1rem;
+        transform: translateX(100%);
+    }
+
+    .nav_open {
+        transform: translateX(0);
+    }
+
+    .header_scroll {
+        justify-content: space-between;
+    }
+
+    .hidden {
+        display: block;
+    }
+}
