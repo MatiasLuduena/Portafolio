@@ -21,7 +21,7 @@ h1 {
 }
 
 h2 {
-    margin-bottom: 30px;
+    margin-bottom: 10px;
     font-size: 18px;
     font-weight: 300;
     line-height: 1.6em;
@@ -29,6 +29,14 @@ h2 {
 
 span {
     color: #0FBB57;
+}
+
+.div_stack {
+    margin-bottom: 15px;
+}
+
+.div_stack img {
+    margin: 0 6px;
 }
 
 button {
