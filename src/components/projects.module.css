@@ -1,0 +1,22 @@
+.projects {
+    width: 90%;
+    max-width: 900px;
+    height: 100%;
+    min-height: 100vh;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.projects h3 {
+    font-weight: 500;
+}
+
+.line_projects {
+    width: 60px;
+    height: 3px;
+    background-color: #0FBB57;
+    margin: 7px 0 0 5px;
+}

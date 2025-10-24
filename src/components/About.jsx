@@ -2,7 +2,7 @@ import styles from "./about.module.css"
 
 const About = () => {
     return(
-        <div className={styles.about}>
+        <section className={styles.about} id="about">
             <div className={`${styles.about_top}`}>
                 <p className={styles.p_titulo}>
                     Hola, mi nombre es Matías y soy <span>desarrollador web</span> por hobby.
@@ -24,7 +24,7 @@ const About = () => {
                     ))
                 }
             </div>
-        </div>
+        </section>
     )
 }
 

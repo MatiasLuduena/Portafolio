@@ -5,16 +5,39 @@ import { useState, useEffect } from "react"
 const Header = () => {
     const [scrolled, setScrolled] = useState(false)
     const [menuOpen, setMenuOpen] = useState(false);
+    const [activeSection, setActiveSection] = useState("home");
 
     useEffect(() => {
         const handleScroll = () => {
-            // activa si el scroll pasa los 50px
             setScrolled(window.scrollY > 50);
         };
 
         window.addEventListener("scroll", handleScroll);
-        return () => window.removeEventListener("scroll", handleScroll);
-    }, [])
+
+        const sections = document.querySelectorAll("section");
+        const observer = new IntersectionObserver(
+            (entries) => {
+                entries.forEach((entry) => {
+                    if (entry.isIntersecting) {
+                        setActiveSection(entry.target.id);
+                    }
+                });
+            },
+            {
+                rootMargin: "-50% 0px -50% 0px",
+                threshold: 0,
+            }
+        );
+
+        sections.forEach((section) => observer.observe(section));
+
+        return () => {
+            window.removeEventListener("scroll", handleScroll);
+            observer.disconnect();
+        };
+
+    }, []);
+
 
     return(
         <header className={`${styles.header} ${scrolled && styles.header_scroll}`}>
@@ -26,12 +49,18 @@ const Header = () => {
                 {menuOpen ? "✕" : "☰"}
             </button>
             <div className={`${scrolled && styles.hidden}`}>
-                <a href="#" className={styles.a_titulo}>matias ludueña</a>
+                <a href="#home" className={styles.a_titulo}>matias ludueña</a>
             </div>
             <nav className={`${styles.nav} ${menuOpen ? styles.nav_open : ""} ${scrolled && styles.nav_scroll}`}>
-                <a href="" onClick={() => setMenuOpen(false)}>inicio</a>
-                <a href="" onClick={() => setMenuOpen(false)}>sobre mi</a>
-                <a href="" onClick={() => setMenuOpen(false)}>proyectos</a>
+                <a href="#home" onClick={() => setMenuOpen(false)} className={activeSection === "home" ? styles.active : ""}>
+                    inicio
+                </a>
+                <a href="#about" onClick={() => setMenuOpen(false)} className={activeSection === "about" ? styles.active : ""}>
+                    sobre mi
+                </a>
+                <a href="#projects" onClick={() => setMenuOpen(false)} className={activeSection === "projects" ? styles.active : ""}>
+                    proyectos
+                </a>
             </nav>
         </header>
     )

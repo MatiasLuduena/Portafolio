@@ -2,7 +2,7 @@ import styles from "./home.module.css"
 
 const Home = ({ children }) => {
     return(
-        <div className={styles.home}>
+        <section className={styles.home} id="home">
             { children }
             <div className={styles.container}>
                 <h1>Transformo <span>ideas</span> en sitios y aplicaciones web modernas.</h1>
@@ -15,9 +15,9 @@ const Home = ({ children }) => {
                     <img src="src/assets/node.svg" alt="react icon" width="20" height="20"/>
                     <img src="src/assets/mongodb.svg" alt="react icon" width="20" height="20"/>
                 </div>
-                <button>saber mas</button>
+                <a href="#about" className={styles.home_button}>saber mas</a>
             </div>
-        </div>
+        </section>
     )
 }
 
