@@ -32,7 +32,6 @@ const Header = () => {
                 <a href="" onClick={() => setMenuOpen(false)}>inicio</a>
                 <a href="" onClick={() => setMenuOpen(false)}>sobre mi</a>
                 <a href="" onClick={() => setMenuOpen(false)}>proyectos</a>
-                <a href="" onClick={() => setMenuOpen(false)}>contactame</a>
             </nav>
         </header>
     )

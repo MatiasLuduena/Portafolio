@@ -2,7 +2,7 @@ import styles from "./home.module.css"
 
 const Home = ({ children }) => {
     return(
-        <main className={styles}>
+        <div className={styles.home}>
             { children }
             <div className={styles.container}>
                 <h1>Transformo <span>ideas</span> en sitios y aplicaciones web modernas.</h1>
@@ -17,7 +17,7 @@ const Home = ({ children }) => {
                 </div>
                 <button>saber mas</button>
             </div>
-        </main>
+        </div>
     )
 }
 
